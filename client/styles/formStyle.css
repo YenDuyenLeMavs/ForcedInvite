@@ -1,13 +1,12 @@
 /* Add more specific CSS rules to target form elements */
 form {
-    /* max-width: 400px; */
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    background: #f9f9f9;
+    background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    font-family: Arial, sans-serif;
 }
 
 label {
@@ -38,4 +37,59 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #c23539;
+}
+
+/* Additional Styles */
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e94d58;
+    color: white;
+}
+
+.gif {
+    max-width: auto;
+    height: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-container {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 0 auto;
+    /* padding: 20px; */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-link-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+a#invitationLink {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #e94d58;
+    text-decoration: none;
+    border: 2px solid #e94d58;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a#invitationLink:hover {
+    background-color: #e94d58;
+    color: white;
 }

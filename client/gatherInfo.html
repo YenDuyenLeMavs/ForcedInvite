@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/formStyle.css"/>
     <title>Gather Information</title>
-    <!-- Link your CSS file if needed -->
 </head>
 <body>
-    <form id="customForm">
-        <!-- Input fields to gather custom information -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Friend"><br><br>
-        
-        <label for="question">Question:</label>
-        <input type="text" id="question" name="question" placeholder="Will you go out with me?"><br><br>
-        
-        <label for="date">Date:</label>
-        <input type="text" id="date" name="date" placeholder="(Optional) Enter date of event"><br><br>
-        
-        <button type="submit">Generate Invitation</button>
-    </form>
+    <h1 class="page-title">Forced Invitation Generator</h1>
+
+    <img class="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif" alt="GIF">
+
+    <div class="form-container">
+        <form id="customForm">
+            <!-- Input fields to gather custom information -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Friend"><br><br>
+            
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" placeholder="Will you go out with me?"><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" placeholder="(Optional) Enter date of event"><br><br>
+            
+            <button type="submit">Generate Invitation Link</button>
+        </form>
+    </div>
+
+    <div class="invitation-link-container">
+        <a href="#" id="invitationLink" style="display: none;">Invitation Link</a>
+    </div>
+
     <!-- Place this wherever you want the link to be displayed -->
-    <a href="#" id="invitationLink" style="display: none;">Invitation Link</a>
+    <!-- <a href="#" id="invitationLink" style="display: none;">Invitation Link</a> -->
 
     <script src="scripts/gatherInfo.js"></script>
 </body>

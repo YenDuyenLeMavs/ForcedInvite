@@ -12,13 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Generate a custom link with the provided information
         const customLink = `https://yenduyenlemavs.github.io/ForcedInvite/invitation.html?name=${encodeURIComponent(name)}&question=${encodeURIComponent(question)}&date=${encodeURIComponent(date)}`;
-
-        // Set the generated link as the href attribute of the anchor element
-        invitationLink.href = customLink;
-        invitationLink.style.display = "block"; // Show the link element
-
-        // Optionally, you can display the link somewhere on the page for the user to copy
-        // For instance, in a <div> with id "linkContainer"
-        // document.getElementById("linkContainer").innerHTML = `<p>Copy this link: <a href="${customLink}">${customLink}</a></p>`;
+        document.getElementById("link-container").innerHTML = `<p>Copy this link: <a href="${customLink}">${customLink}</a></p>`;
     });
 });

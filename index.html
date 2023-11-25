@@ -8,9 +8,7 @@
 </head>
 <body>
     <h1 class="page-title">Forced Invitation Generator</h1>
-
-    <img class="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif" alt="GIF">
-
+    <div class="middle">
     <div class="form-container">
         <form id="customForm">
             <!-- Input fields to gather custom information -->
@@ -23,17 +21,62 @@
             <label for="date">Date:</label>
             <input type="text" id="date" name="date" placeholder="(Optional) Enter date of event"><br><br>
             
-            <button type="submit">Generate Invitation Link</button>
+            <div class="button-wrapper">
+                <button type="submit">Generate Invitation Link</button>
+            </div>
         </form>
     </div>
 
-    <div class="invitation-link-container">
-        <a href="#" id="invitationLink" style="display: none;">Invitation Link</a>
+    <div class="preview">
+        <h2 class="invitation-question">Invitation Question</h2>
+        <h2 class="invitation-date">Invitation Date</h2>
+        <img class="gif" alt="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif"/>
+        <div class="btn-group">
+            <button class="yes-btn">Yes</button>
+            
+            <button class="no-btn">No</button>
+        </div>
     </div>
-
-    <!-- Place this wherever you want the link to be displayed -->
-    <!-- <a href="#" id="invitationLink" style="display: none;">Invitation Link</a> -->
-
+    </div>
+    <div id="link-container"></div>
+    
+    <footer class="author-info">
+        <div class="author-details">
+            <!-- <p class="author-name">Author: Yen Duyen Amy Le</p> -->
+            <p class="author-contact">Contact: yenduyen.le@outlook.com</p>
+            <p class="author-contact">GIFs by @achtung_tw on GIPHY</p>
+        </div>
+    </footer>
+    
     <script src="scripts/gatherInfo.js"></script>
+    <script>
+        // Function to update the preview based on input values
+        function updatePreview() {
+            const name = document.getElementById("name").value;
+            const question = document.getElementById("question").value || "Will you go out with me?";
+            const date = document.getElementById("date").value || "on the 18th";
+
+            const invitationQuestion = document.querySelector(".invitation-question");
+            const invitationDate = document.querySelector(".invitation-date");
+
+            invitationQuestion.textContent = `${name}, ${question}`;
+            invitationDate.textContent = `See you ${date}!`;
+        }
+
+        // Update the preview when the form is submitted
+        document.getElementById("customForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            updatePreview();
+        });
+
+        // Update the preview as the user types in the form
+        const formInputs = document.querySelectorAll("#customForm input");
+        formInputs.forEach(input => {
+            input.addEventListener("input", updatePreview);
+        });
+
+        // Initial update on page load
+        updatePreview();
+    </script>
 </body>
 </html>

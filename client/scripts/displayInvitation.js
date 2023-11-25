@@ -11,8 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const question = urlParams.get('question');
     const date = urlParams.get('date');
 
-    // Set the invitation content with custom data
-    invitationQuestion.textContent = `${name}, ${question}`;
+    if (name) {
+        invitationQuestion.textContent = `${name}, ${question}`;
+    } else {
+        invitationQuestion.textContent = `${question}`;
+    }
 
     if (date) {
         invitationDate.textContent = `${date}`;

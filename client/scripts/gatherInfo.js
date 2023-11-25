@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         // Retrieve input values from the form
-        const name = document.getElementById("name").value || "Friend";
+        const name = document.getElementById("name").value;
         const question = document.getElementById("question").value || "Will you go out with me?";
         const date = document.getElementById("date").value;
 

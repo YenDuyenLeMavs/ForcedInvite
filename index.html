@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/formStyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-oqd6P5HVfIh8l4O3wHN6P2rAa7fWHsQ1d4NwibQJxVfc6nuy4/+dp0VyRJ5+7fV+" crossorigin="anonymous">
     <title>Gather Information</title>
 </head>
 <body>
@@ -23,16 +24,29 @@
             <label for="date">Date:</label>
             <input type="text" id="date" name="date" placeholder="(Optional) Enter date of event"><br><br>
             
-            <button type="submit">Generate Invitation Link</button>
+            <button type="submit" id="generateLinkBtn">Generate Invitation Link</button>
+            <div id="buttonContainer">
+                <button id="copyLinkBtn" class="actionBtn" style="display: none;">
+                    <img src="link-solid.svg" alt="Copy link icon"> Copy Invitation Link
+                </button>
+                <button id="previewBtn" class="actionBtn" style="display: none;">
+                    <img src="up-right-from-square-solid.svg" alt="Preview invitation icon"> Preview Invitation
+                </button>
+                <!-- <a href="#" id="newInvitationLink" style="display: none;">Generate New Invitation</a> -->
+            </div>
+
         </form>
+        
     </div>
 
-    <div class="invitation-link-container">
-        <a href="#" id="invitationLink" style="display: none;">Invitation Link</a>
-    </div>
-
-    <!-- Place this wherever you want the link to be displayed -->
-    <!-- <a href="#" id="invitationLink" style="display: none;">Invitation Link</a> -->
+    
+    <footer class="author-info">
+        <div class="author-details">
+            <p class="author-contact">Contact: yenduyen.le@outlook.com</p>
+            <p class="author-contact">Original Invitation Design: https://github.com/jeycaarce/message</p>
+            <p class="author-contact">GIFs by @achtung_tw on GIPHY</p>
+        </div>
+    </footer>
 
     <script src="scripts/gatherInfo.js"></script>
 </body>

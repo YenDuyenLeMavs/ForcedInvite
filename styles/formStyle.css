@@ -49,9 +49,15 @@ body {
 
 .page-title {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #e94d58;
     color: white;
+    margin-top: 0;
+}
+
+#link-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .gif {
@@ -76,7 +82,7 @@ body {
     margin-top: 20px; /* Adjust the margin as needed */
 }
 
-a#invitationLink {
+/* a#invitationLink {
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -92,4 +98,81 @@ a#invitationLink {
 a#invitationLink:hover {
     background-color: #e94d58;
     color: white;
+} */
+.author-info {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.author-details {
+    display: flex;
+    justify-content: center;
+}
+
+
+.author-contact {
+    margin: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.author-name {
+    font-weight: bold;
+}
+/* Style for the button container */
+/* .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+} */
+
+/* Style for the invitation link */
+.invitation-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.invitation-link a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Style for the buttons */
+#copyLinkBtn,
+#previewBtn {
+    display: none;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e94d58;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#copyLinkBtn:hover,
+#previewBtn:hover {
+    background-color: #c23539;
+}
+.actionBtn img {
+    width: 20px; /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
+    margin-right: 8px; /* Add space between icon and text */
+}
+#buttonContainer {
+    margin-top: 20px; /* Adjust the top margin based on the spacing you want */
 }

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const date = document.getElementById("date").value;
 
         // Generate a custom link with the provided information
-        const customLink = `${window.location.origin}/invitation.html?name=${encodeURIComponent(name)}&question=${encodeURIComponent(question)}&date=${encodeURIComponent(date)}`;
+        const customLink = `https://yenduyenlemavs.github.io/ForcedInvite/invitation.html?name=${encodeURIComponent(name)}&question=${encodeURIComponent(question)}&date=${encodeURIComponent(date)}`;
 
         // Set the generated link as the href attribute of the anchor element
         invitationLink.href = customLink;

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const yesBtn = document.querySelector(".yes-btn");
     const noBtn = document.querySelector(".no-btn");
     const gif = document.querySelector(".gif");
+    const customInvitationLink = document.getElementById("customInvitationLink");
+
 
     const urlParams = new URLSearchParams(window.location.search);
     const question = urlParams.get('question');

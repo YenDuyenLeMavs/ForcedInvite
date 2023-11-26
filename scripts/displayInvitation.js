@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         gif.src = "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
         
+        const customInvitationLink = document.createElement('a');
+        customInvitationLink.href = "https://yenduyenlemavs.github.io/ForcedInvite/"; // Replace with the link to your custom invitation page
+        customInvitationLink.textContent = "Create your own custom forced invitation!";
+        customInvitationLink.target = "_blank"; // Opens in a new tab
+        customInvitationLink.style.display = "block";
+        customInvitationLink.style.marginTop = "20px"; // Adjust spacing as needed
+
+        // Append the link after the 'Yes' button
+        yesBtn.parentNode.insertBefore(customInvitationLink, yesBtn.nextSibling);
+
         yesBtn.parentNode.remove(); 
     });
 

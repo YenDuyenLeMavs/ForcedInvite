@@ -7,21 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Retrieve custom name, question, and date from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get('name'); // Default to "Friend" if name is not provided
+    // const name = urlParams.get('name'); // Default to "Friend" if name is not provided
     const question = urlParams.get('question');
     const date = urlParams.get('date');
 
-    if (name) {
-        invitationQuestion.textContent = `${name}, ${question}`;
-    } else {
-        invitationQuestion.textContent = `${question}`;
-    }
-
-    if (date) {
-        invitationDate.textContent = `${date}`;
-    } else {
-        invitationDate.textContent = '';
-    }
+    invitationQuestion.textContent = `${question}`;
 
     // Handle click on "Yes" button
     yesBtn.addEventListener("click", () => {

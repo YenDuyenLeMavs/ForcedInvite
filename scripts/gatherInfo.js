@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const customLink = `https://yenduyenlemavs.github.io/ForcedInvite/invitation.html?question=${encodeURIComponent(question)}&date=${encodeURIComponent(date)}`;
 
         const copyLinkBtn = document.getElementById('copyLinkBtn');
-        const previewBtn = document.getElementById('previewBtn');
+        // const previewBtn = document.getElementById('previewBtn');
 
         copyLinkBtn.addEventListener("click", function() {
             const copiedLink = customLink;
@@ -22,18 +22,18 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.removeChild(textarea);
         });
 
-        previewBtn.addEventListener("click", function(event) {
-            event.preventDefault();
+        // previewBtn.addEventListener("click", function(event) {
+        //     event.preventDefault();
 
-            // Open in a new tab
-            const newWindow = window.open('', '_blank');
-            if (newWindow) {
-                newWindow.location.href = customLink;
-            } else {
-                // If the new tab/window was blocked
-                window.location.href = customLink;
-            }
-        });
+        //     // Open in a new tab
+        //     const newWindow = window.open('', '_blank');
+        //     if (newWindow) {
+        //         newWindow.location.href = customLink;
+        //     } else {
+        //         // If the new tab/window was blocked
+        //         window.location.href = customLink;
+        //     }
+        // });
 
         copyLinkBtn.style.display = 'inline-block';
         previewBtn.style.display = 'inline-block';

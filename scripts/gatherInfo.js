@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         document.getElementById("previewBtn").addEventListener("click", function() {
-            window.open(customLink);
+            window.open(customLink, '_blank');
         });
 
         copyLinkBtn.style.display = 'inline-block';

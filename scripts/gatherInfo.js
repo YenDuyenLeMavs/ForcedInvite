@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         document.getElementById("previewBtn").addEventListener("click", function() {
+            event.preventDefault();
             window.open(customLink, '_blank');
         });
 

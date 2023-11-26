@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("customForm");
-    const copyLinkBtn = document.getElementById('copyLinkBtn');
-    const previewBtn = document.getElementById('previewBtn');
     
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -10,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const date = document.getElementById("date").value;
 
         const customLink = `https://yenduyenlemavs.github.io/ForcedInvite/invitation.html?question=${encodeURIComponent(question)}&date=${encodeURIComponent(date)}`;
+
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+        const previewBtn = document.getElementById('previewBtn');
 
         document.getElementById("copyLinkBtn").addEventListener("click", function() {
             const copiedLink = customLink;

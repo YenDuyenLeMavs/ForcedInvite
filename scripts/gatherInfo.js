@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const copyLinkBtn = document.getElementById('copyLinkBtn');
         const previewBtn = document.getElementById('previewBtn');
 
-        document.getElementById("copyLinkBtn").addEventListener("click", function() {
+        copyLinkBtn.addEventListener("click", function() {
             const copiedLink = customLink;
             const textarea = document.createElement('textarea');
             textarea.value = copiedLink;
@@ -22,9 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.removeChild(textarea);
         });
 
-        document.getElementById("previewBtn").addEventListener("click", function() {
+        previewBtn.addEventListener("click", function(event) {
             event.preventDefault();
-            window.open(customLink, '_blank');
+
+            // Open in a new tab
+            const newWindow = window.open('', '_blank');
+            if (newWindow) {
+                newWindow.location.href = customLink;
+            } else {
+                // If the new tab/window was blocked
+                window.location.href = customLink;
+            }
         });
 
         copyLinkBtn.style.display = 'inline-block';
